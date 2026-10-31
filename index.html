@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="TYPEVERSE LMS Portal - Touch Typing and Computer Literacy Learning System">
+
+  <title>TYPEVERSE - LMS Portal</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="header-container">
+
+      <a href="#lobby" class="brand">
+        <span class="brand-icon">⌨</span>
+        <span class="brand-text">
+          <strong>TYPEVERSE</strong>
+          <small>LMS PORTAL</small>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#lobby" class="active">Lobby</a>
+        <a href="#levels">Levels</a>
+        <a href="#drills">Typing Drills</a>
+        <a href="#library">Doc Library</a>
+        <a href="#exam">Exam Bank</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="themeToggle"
+          aria-label="Switch to light mode"
+        >
+          ☼
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="openAccount"
+          aria-label="Open account"
+        >
+          ⇥
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="openTestSettings"
+        >
+          ⚙
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- GUEST MODE BANNER -->
+  <div class="guest-banner" id="guestBanner">
+    <span class="guest-info-icon">ⓘ</span>
+
+    <p>
+      <strong>You are exploring in Guest Mode.</strong>
+      Complete lessons and interactive drills freely!
+      To record official grades and claim badges,
+      please register.
+    </p>
+
+    <button type="button" id="openRegister">
+      Create Free Account
+    </button>
+  </div>
+
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- LOBBY / HERO -->
+    <section class="lobby-section" id="lobby">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <div class="hero-label">
+            ✧ Gamified Touch-Typing & Computer
+            Literacy System
+          </div>
+
+          <h1>
+            Master Office Productivity &
+            Speed-Typing Skills
+          </h1>
+
+          <p>
+            Welcome to the TYPEVERSE LMS Portal.
+            Standardized keyboarding curriculum,
+            office document creation, and
+            comprehensive literacy quiz banks
+            designed for college students and
+            office professionals.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#levels" class="btn btn-primary">
+              Start Level 1 →
+            </a>
+
+            <a href="#drills" class="btn btn-secondary">
+              Quick Speed Test
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual">
+          <div class="keyboard-card">
+            <div class="keyboard-icon">⌨</div>
+            <h3>TYPEVERSE</h3>
+            <p>Practice. Improve. Achieve.</p>
+
+            <div class="keyboard-display">
+              <span>T</span>
+              <span>Y</span>
+              <span>P</span>
+              <span>E</span>
+              <span>V</span>
+              <span>E</span>
+              <span>R</span>
+              <span>S</span>
+              <span>E</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- DASHBOARD STATISTICS -->
+      <div class="dashboard-stats" id="dashboardStats">
+
+        <div class="stat-card">
+          <p>Average WPM</p>
+          <h2 id="statWpm">0 WPM</h2>
+          <span>↗ Target: 40+ WPM</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Accuracy</p>
+          <h2 id="statAccuracy">100%</h2>
+          <span>◎ Standard: 95%+</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Completed Levels</p>
+          <h2 id="statLevels">0 / 7</h2>
+          <span>🏆 Course Progress</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Unlocked Badges</p>
+          <h2 id="statBadges">2 / 10</h2>
+          <span>⭐ Cute Badges</span>
+        </div>
+
+      </div>
+
+
+      <!-- QUICK ACCESS -->
+      <div class="quick-access">
+
+        <h2>Explore TYPEVERSE</h2>
+
+        <div class="quick-access-grid">
+            <a href="#levels" class="quick-access-card">
+            <span>📚</span>
+            <h3>Learning Levels</h3>
+            <p>Explore the seven curriculum modules.</p>
+          </a>
+
+          <a href="#drills" class="quick-access-card">
+            <span>⌨️</span>
+            <h3>Typing Drills</h3>
+            <p>Improve your typing speed and accuracy.</p>
+          </a>
+
+          <a href="#exam" class="quick-access-card">
+            <span>📝</span>
+            <h3>Exam Bank</h3>
+            <p>Test your computer literacy knowledge.</p>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- ===================================
+         CURRICULUM LEVELS
+    ==================================== -->
+
+    <section class="content-section" id="levels">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">YOUR LEARNING JOURNEY</p>
+          <h2>Curriculum Level Modules</h2>
+          <p>Explore all seven learning modules.</p>
+        </div>
+
+        <span class="section-counter">All 7 Modules</span>
+      </div>
+
+      <div class="levels-grid" id="levelsGrid">
+        <!-- Generated by JavaScript -->
+      </div>
+
+    </section>
+
+
+    <!-- ===================================
+         TYPING DRILLS
+    ==================================== -->
+
+    <section class="content-section" id="drills">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">PRACTICE AREA</p>
+          <h2>Typing Speed Test</h2>
+          <p>Build your typing speed and accuracy through practice.</p>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-open-settings
+        >
+          ⚙ Test Settings
+        </button>
+      </div>
+
+      <div class="typing-workspace">
+
+        <div class="typing-toolbar">
+
+          <div>
+            <span>Test Mode</span>
+            <strong id="currentTestMode">30 Seconds</strong>
+          </div>
+
+          <div>
+            <span>Time</span>
+            <strong id="drillTimer">00:30</strong>
+          </div>
+
+          <div>
+            <span>WPM</span>
+            <strong id="drillWpm">0</strong>
+          </div>
+
+          <div>
+            <span>Accuracy</span>
+            <strong id="drillAccuracy">100%</strong>
+          </div>
+
+        </div>
+
+        <div class="typing-progress-container">
+          <div
+            class="typing-progress"
+            id="drillProgress"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          ></div>
+        </div>
+
+        <div class="typing-prompt" id="drillPrompt">
+          Loading typing exercise...
+        </div>
+
+        <textarea
+          id="drillInput"
+          placeholder="Start typing here..."
+          rows="5"
+          disabled
+        ></textarea>
+
+        <div class="typing-actions">
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="startDrill"
+          >
+            Start Test
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="resetDrill"
+          >
+            Reset Test
+          </button>
+
+        </div>
+
+        <p id="drillMessage" aria-live="polite"></p>
+
+      </div>
+
+    </section>
+    <!-- ===================================
+         DOCUMENT LIBRARY
+    ==================================== -->
+
+    <section class="content-section" id="library">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">OFFICE PRODUCTIVITY</p>
+          <h2>Document Library</h2>
+          <p>Explore useful workplace document templates.</p>
+        </div>
+      </div>
+
+      <div class="library-grid">
+
+        <article class="library-card">
+
+          <div class="library-card-heading">
+            <span>📄</span>
+            <h3>Office Memorandum</h3>
+          </div>
+
+          <textarea
+            id="memoTemplate"
+            rows="9"
+            readonly
+          >OFFICE MEMORANDUM
+
+To:
+From:
+Date:
+Subject:
+
+This memorandum is intended to communicate important office information.
+
+Details:
+[Write your message here.]
+
+Thank you.</textarea>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-copy="memoTemplate"
+          >
+            Copy Template
+          </button>
+
+        </article>
+
+
+        <article class="library-card">
+
+          <div class="library-card-heading">
+            <span>📰</span>
+            <h3>Press Release</h3>
+          </div>
+
+          <textarea
+            id="pressTemplate"
+            rows="9"
+            readonly
+          >PRESS RELEASE
+
+FOR IMMEDIATE RELEASE
+
+Headline:
+[Enter headline]
+
+Date:
+[Enter date]
+
+Introduction:
+[Write your announcement.]
+
+Additional Information:
+[Add important details.]
+
+Contact Information:
+[Enter contact details.]</textarea>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-copy="pressTemplate"
+          >
+            Copy Template
+          </button>
+
+        </article>
+
+      </div>
+
+      <p id="libraryMessage" aria-live="polite"></p>
+
+    </section>
+
+
+    <!-- ===================================
+         EXAM BANK
+    ==================================== -->
+
+    <section class="content-section" id="exam">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">KNOWLEDGE CHECK</p>
+          <h2>Computer Literacy Exam Bank</h2>
+          <p>Answer the questions and check your knowledge.</p>
+        </div>
+      </div>
+
+      <div class="exam-workspace">
+
+        <div class="quiz-header">
+          <span id="quizProgress">Question 1 of 10</span>
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="restartQuiz"
+          >
+            Restart Quiz
+          </button>
+        </div>
+
+        <h3 id="quizQuestion">
+          Loading question...
+        </h3>
+
+        <div id="quizOptions" class="quiz-options">
+          <!-- Generated by JavaScript -->
+        </div>
+
+        <p id="quizFeedback" aria-live="polite"></p>
+
+        <div class="quiz-navigation">
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="prevQuestion"
+          >
+            Previous
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="nextQuestion"
+          >
+            Next Question
+          </button>
+
+        </div>
+
+        <div id="quizScore" class="quiz-score"></div>
+
+      </div>
+
+    </section>
+    <!-- ===================================
+         ACHIEVEMENTS
+    ==================================== -->
+
+    <section class="content-section" id="achievements">
+
+      <div class="achievement-heading">
+
+        <p class="section-label">YOUR REWARDS</p>
+
+        <h2>✨ Cute Accomplishment Badges & Rewards</h2>
+
+        <p>
+          Earn badges as you advance through typing
+          levels, stories, and literacy drills!
+        </p>
+
+      </div>
+
+      <div
+        class="achievement-grid"
+        id="achievementBadgeGrid"
+      >
+
+        <div class="badge-card unlocked">
+          <div class="badge-icon">⭐</div>
+          <h3>First Step</h3>
+          <p>Logged in or Guest</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level1">
+          <div class="badge-icon">⌨️</div>
+          <h3>Keyboard Rookie</h3>
+          <p>Completed Level 1</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level2">
+          <div class="badge-icon">🎯</div>
+          <h3>Typing Apprentice</h3>
+          <p>Completed Level 2</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level3">
+          <div class="badge-icon">📖</div>
+          <h3>Story Explorer</h3>
+          <p>Completed Level 3</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level4">
+          <div class="badge-icon">📁</div>
+          <h3>File Organizer</h3>
+          <p>Completed Level 4</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level5">
+          <div class="badge-icon">✍️</div>
+          <h3>Office Communicator</h3>
+          <p>Completed Level 5</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level6">
+          <div class="badge-icon">🛠️</div>
+          <h3>Troubleshooter</h3>
+          <p>Completed Level 6</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="level7">
+          <div class="badge-icon">👑</div>
+          <h3>TYPEVERSE Master</h3>
+          <p>Completed Level 7 Final</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="speed">
+          <div class="badge-icon">⚡</div>
+          <h3>Speed Demon</h3>
+          <p>Reached 40+ WPM</p>
+        </div>
+
+        <div class="badge-card locked" data-badge="accuracy">
+          <div class="badge-icon">🎯</div>
+          <h3>Bullseye</h3>
+          <p>Achieved 98%+ Accuracy</p>
+        </div>
+
+      </div>
+
+      <p id="achievementMessage" aria-live="polite">
+        Complete activities to earn your badges!
+      </p>
+
+    </section>
+
+  </main>
+  <!-- ===================================
+         FOOTER
+    ==================================== -->
+
+    <footer class="site-footer">
+
+      <div class="footer-container">
+
+        <div class="footer-brand">
+          <h2>TYPEVERSE</h2>
+          <p>LMS PORTAL</p>
+
+          <p>
+            Gamified Touch-Typing and Computer
+            Literacy Learning System.
+          </p>
+        </div>
+
+        <div class="footer-information">
+          <h3>Project Information</h3>
+
+          <p>School: [School Name]</p>
+          <p>Subject: [Subject Name]</p>
+          <p>Professor: [Professor Name]</p>
+          <p>Group Members: [Group Members]</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2026 TYPEVERSE LMS Portal.
+          All Rights Reserved.
+        </p>
+      </div>
+
+    </footer>
+
+
+    <!-- ===================================
+         TEST SETTINGS MODAL
+    ==================================== -->
+
+    <div
+      class="settings-modal"
+      id="testSettingsModal"
+      aria-hidden="true"
+    >
+
+      <div class="settings-box">
+
+        <div class="settings-header">
+          <h2 id="settingsTitle">Test Settings</h2>
+
+          <button
+            type="button"
+            id="closeTestSettings"
+            aria-label="Close settings"
+          >
+            &times;
+          </button>
+        </div>
+
+
+        <div class="settings-group">
+          <h3>Test Mode</h3>
+
+          <div class="settings-options">
+            <button type="button" data-mode="time">Time</button>
+            <button type="button" data-mode="words">Words</button>
+            <button type="button" data-mode="quote">Quote</button>
+            <button type="button" data-mode="zen">Zen</button>
+            <button type="button" data-mode="custom">Custom</button>
+          </div>
+        </div>
+
+
+        <div class="settings-group">
+          <h3>Test Duration</h3>
+
+          <div class="settings-options">
+            <button type="button" data-time="15">15s</button>
+            <button type="button" data-time="30">30s</button>
+            <button type="button" data-time="60">60s</button>
+            <button type="button" data-time="120">120s</button>
+            <button type="button" data-time="custom">Custom</button>
+          </div>
+
+          <input
+            type="number"
+            id="customTime"
+            min="1"
+            max="600"
+            placeholder="Custom seconds"
+          >
+        </div>
+
+
+        <div class="settings-group">
+          <h3>Word Count</h3>
+
+          <div class="settings-options">
+            <button type="button" data-words="10">10</button>
+            <button type="button" data-words="25">25</button>
+            <button type="button" data-words="50">50</button>
+            <button type="button" data-words="100">100</button>
+            <button type="button" data-words="custom">Custom</button>
+          </div>
+
+          <input
+            type="number"
+            id="customWords"
+            min="1"
+            max="1000"
+            placeholder="Custom words"
+          >
+        </div>
+
+
+        <div class="settings-group">
+
+          <label>
+            <input type="checkbox" id="settingPunctuation">
+            Include Punctuation
+          </label>
+
+          <label>
+            <input type="checkbox" id="settingNumbers">
+            Include Numbers
+          </label>
+
+        </div>
+
+
+        <div class="settings-group">
+          <h3>Custom Text</h3>
+
+          <textarea
+            id="customTestText"
+            rows="4"
+            placeholder="Enter your own typing text..."
+          ></textarea>
+        </div>
+
+        <p id="settingsMessage" aria-live="polite"></p>
+
+        <div class="settings-actions">
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="resetTestSettings"
+          >
+            Reset
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="saveTestSettings"
+          >
+            Save Settings
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- ===================================
+         LOGIN / REGISTER MODAL
+    ==================================== -->
+
+    <div
+      class="account-modal"
+      id="accountModal"
+      aria-hidden="true"
+    >
+
+      <div class="account-box">
+
+        <button
+          type="button"
+          class="account-close"
+          id="closeAccount"
+          aria-label="Close account window"
+        >
+          &times;
+        </button>
+
+        <div class="account-tabs">
+
+          <button
+            type="button"
+            class="account-tab active"
+            id="loginTab"
+          >
+            Log In
+          </button>
+
+          <button
+            type="button"
+            class="account-tab"
+            id="registerTab"
+          >
+            Register Student
+          </button>
+
+        </div>
+
+
+        <form id="accountForm">
+
+          <label for="accountEmail">
+            Student ID or Email
+          </label>
+
+          <input
+            type="text"
+            id="accountEmail"
+            placeholder="Enter your student ID or email"
+            required
+          >
+
+          <label for="accountPassword">
+            Password
+          </label>
+
+          <input
+            type="password"
+            id="accountPassword"
+            placeholder="Enter your password"
+            required
+          >
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="accountSubmit"
+          >
+            ⇥ Sign In to Dashboard
+          </button>
+
+        </form>
+
+        <p id="accountMessage" aria-live="polite"></p>
+
+        <button
+          type="button"
+          id="continueGuest"
+          class="guest-access-button"
+        >
+          Continue as Guest
+        </button>
+
+      </div>
+
+    </div>
+
+
+  <!-- MAIN JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
